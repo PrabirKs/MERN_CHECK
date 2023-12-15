@@ -1,0 +1,10 @@
+DELETE   http://localhost:5000/api/goals/123
+
+###
+POST http://localhost:5000/todo/new 
+
+Content-Type: application/json
+
+{
+"text": "take bath"
+}
