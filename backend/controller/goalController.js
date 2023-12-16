@@ -10,14 +10,18 @@ const getGoals = (req,res) =>{
 //@route POST /api/goals
 //@access Private
 const setGoals = (req,res) =>{
-    res.status(200).json({message :"set goals"});
+    if(!req.body.text){
+        res.status(400);
+        throw new Error('please add a text-field') ;
+    }
+   res.status(200).json({message : "set goals"})
 }
 
 //@desc Update goals
 //@route  PUT/api/goals:id
 //@access Private
-const updateGoals = (req,res) =>{
-    res.status(200).json({message :`update goal ${req.params.id}`});
+const updateGoals = (req,res) =>{ 
+    res.status(200).json({message :`update goal ${req.params.id}`});  
 }
 
 
