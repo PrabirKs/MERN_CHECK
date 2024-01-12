@@ -47,7 +47,7 @@ const registerUser = asyncHandler(async(req,res) =>{
 //@desc Authenticate
 //@route POST /api/users/login 
 //@access public
-
+/*  Each login generates a fresh token with a new expiration time, enhancing security by limiting the window of opportunity for token misuse. (this thing can be done)*/
 const loginUser = asyncHandler(async(req,res) =>{
     const {email,password} = req.body
     
