@@ -107,7 +107,17 @@ h3 {
   border: none;
   background: none;
 }
-
+.close-btn{
+  font-weight: bolder;
+  color: red;
+  width: 20px;
+  height: 20px;
+}
+.close-btn:hover{
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+}
 .form,
 .content {
   width: 70%;

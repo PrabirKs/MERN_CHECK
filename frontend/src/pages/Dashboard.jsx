@@ -6,6 +6,7 @@ import GoalForm from "../component/GoalForm";
 import Spinner from "../component/Spinner";
 import { getGoals, reset } from "../features/goals/goalSlice";
 import GoalItem from "../component/GoalItem";
+import { toast } from "react-toastify";
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ function Dashboard() {
 
   useEffect(() => {
     if (isError) {
+      toast.error(message);
       console.log(message);
     }
 

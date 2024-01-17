@@ -84,6 +84,7 @@ export const goalSlice = createSlice({
             state.isError = true
             state.message = action.payload
         })
+        //for getting goals of a user
         .addCase(getGoals.pending, (state) => {
             state.isLoading = true
         })
@@ -98,6 +99,7 @@ export const goalSlice = createSlice({
             state.isError = true
             state.message = action.payload
         })
+        //deleting a goal
         .addCase(deleteGoal.pending, (state) => {
             state.isLoading = true
         })
